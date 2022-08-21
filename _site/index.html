@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- SEO -->
+		<title>Test Homepage — Vercel 11ty Test</title>
+		<meta name="description" content="some desc" />
+		<link rel="canonical" href="/" />
+
+		<!-- favicon -->
+		<!-- info: https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs -->
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<!-- 32×32 -->
+		<link rel="icon" href="/icon.svg" type="image/svg+xml" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<!-- 180×180 -->
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<!-- <meta name="theme-color" content="#fff">  already defined in the Webmanifest file -->
+
+		<!-- social sharing previews. Make sure every page template has title, desc, and cover url -->
+		<!-- Open graph -->
+		<meta property="og:title" content="Test Homepage" />
+		<meta property="og:description" content="some desc" />
+		<meta property="og:image" content="/assets/images/site-cover.jpg" />
+		<meta property="og:image:alt" content="" />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="/" />
+
+
+		<script type="module">
+			// This is a capable browser, let's improve the UI further!
+			document.documentElement.classList.add("enhanced");
+			document.documentElement.classList.remove("no-js");
+		</script>
+
+		<link
+			rel="preload"
+			href="/assets/fonts/Atkinson-Hyperlegible-Regular.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+		<link
+			rel="preload"
+			href="/assets/fonts/Atkinson-Hyperlegible-Bold.woff2"
+			as="font"
+			type="font/woff2"
+			crossorigin
+		/>
+
+		<style>
+			@font-face {
+				font-family: "Atkinson Hyperlegible";
+				src: url("/assets/fonts/Atkinson-Hyperlegible-Regular.woff2")
+						format("woff2"),
+					url("/assets/fonts/Atkinson-Hyperlegible-Regular.woff")
+						format("woff");
+				font-weight: 400;
+				font-display: swap;
+			}
+
+			@font-face {
+				font-family: "Atkinson Hyperlegible";
+				src: url("/assets/fonts/Atkinson-Hyperlegible-Bold.woff2")
+						format("woff2"),
+					url("/assets/fonts/Atkinson-Hyperlegible-Bold.woff")
+						format("woff");
+				font-weight: 600;
+				font-display: swap;
+			}
+		</style>
+		<script>
+			let theme = window.localStorage.getItem("theme");
+			document.documentElement.setAttribute("data-theme", theme);
+			if (!theme) document.documentElement.setAttribute("data-theme", "light");
+		</script>
+		<script>
+			if ("fonts" in document) {
+				var italic = new FontFace(
+					"Atkinson Hyperlegible",
+					"url(/assets/fonts/Atkinson-Hyperlegible-Italic.woff2) format('woff2'), url(/assets/fonts/Atkinson-Hyperlegible-Italic.woff) format('woff')",
+					{ style: "italic" }
+				);
+				var BoldItalic = new FontFace(
+					"Atkinson Hyperlegible",
+					"url(/assets/fonts/Atkinson-Hyperlegible-BoldItalic.woff2) format('woff2'), url(/assets/fonts/Atkinson-Hyperlegible-BoldItalic.woff) format('woff')",
+					{ style: "italic", weight: "600" }
+				);
+
+				Promise.all([italic.load(), BoldItalic.load()]).then(function (fonts) {
+					fonts.forEach(function (font) {
+						document.fonts.add(font);
+					});
+				});
+			}
+		</script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+
+	<body class="homepage">
+
+		
+
+
+<main id="main" tabindex="-1"><section>Hi there Vercel team</section>
+</main>
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,5 @@
+{
+	"rewrites": [
+		{ "source": "/chapters/:urlmatch*/", "destination": "/api/logged-in" }
+	]
+}

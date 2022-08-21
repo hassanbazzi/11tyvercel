@@ -1,0 +1,4 @@
+{
+	"layout": "layouts/chapter.html",
+	"permalink": "/chapters/{{ page.fileSlug }}/"
+}
