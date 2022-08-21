@@ -4,7 +4,7 @@ export const config = {
 
 export function middleware(req) {
   const url = req.nextUrl;
-  if (url.includes("pass")) {
+  if (url.indexOf("pass") !== -1) {
     return Response.next();
   }
 
