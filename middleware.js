@@ -3,12 +3,5 @@ export const config = {
 };
 
 export function middleware(req) {
-  const url = req.nextUrl;
-  if (url.indexOf("pass") !== -1) {
-    return Response.next();
-  }
-
-  url.pathname = "/login";
-
-  return Response.rewrite(url);
+  return Response.redirect(new URL("/login", req.url));
 }
